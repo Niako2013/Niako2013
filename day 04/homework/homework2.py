@@ -1,0 +1,17 @@
+movie="avatar"
+name="liza"
+match=60+50
+match=1234*866
+match=85957-67
+match=5342/7
+match=789308828985*554332600878
+movie="muana"
+movie="wensday"
+movie="harry poter"
+movie="garedan"
+movie="xo kitty"
+name="nini"
+name="salome"
+name="giorgi"
+name="khatuna"
+name="nia"
