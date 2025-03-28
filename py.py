@@ -1,1 +1,0 @@
-#bool--> true da false
