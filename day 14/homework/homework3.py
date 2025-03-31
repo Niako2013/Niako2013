@@ -1,3 +1,3 @@
 
 #3) რა არის selection ახსენი კომენტარებით
-#(iteration) the process of repeating a set of instructions or steps multiple times
+#selection is a decision or question.
