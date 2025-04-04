@@ -1,0 +1,2 @@
+#2) პითონში რა არის input -ის საწყისი data type? და კოდის მეშვეობით დაწერე საიდან გამომდინარე შეგვიძლია მივხვდეთ
+#While programming very often, we are required to take input from the user so as to manipulate the data and process it thereafter.
