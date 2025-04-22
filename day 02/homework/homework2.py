@@ -1,6 +1,5 @@
 # drawing square
 # shape('circle')
-
 shape("turtle")
 speed(100)
 width(1) 
