@@ -1,0 +1,6 @@
+
+/* 1)კომენტარებით ახსენი რა განსხვავებაა inline internal და external css ს შორის, რომელია მათგან უფრო ძლიერი */
+/* used to apply a unique style to a single CSS element */ inline
+/* used to define a style a single CSS pagE */ internal
+/* a separate CSS file that can be accessed by creating a link within the head section of the webpage */ external
+/* 3)1)შექმენით h1, რომელსაც მიანიჭებთ font-size 40px, inline css ის საშუალებით, მიანიჭეთ background-color internal css ით, და მაინიჭეთ color external css ით */
