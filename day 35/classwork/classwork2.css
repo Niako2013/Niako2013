@@ -1,0 +1,10 @@
+/* 2)საიტზე დაამატეთ 3 p თაგი, პირველს text-shadow ჰქონდეს 5px 4px green, მეორესქონდეს 7px 50px 2348px purole, მესამე ქონდეს 90px 100px 200px brown, განმოიყენეთ id ები */
+p{
+    text-shadow: 5px 4px green;
+}
+p{
+    text-shadow: 7px  50px 2348px purple;
+}
+p{
+    text-shadow: 90px  100px 200px brown;
+}

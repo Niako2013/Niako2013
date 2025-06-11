@@ -1,0 +1,21 @@
+h1{
+    color: green;(13,)
+    text-align: justify;
+}
+
+
+/* text decoration */
+
+p{
+    color: blueviolet;
+    text-decoration: solid underline green;
+    /* text-docoration:  solid under green */
+    /* text- docoration: double overline black; */
+    /* text-docoration:dashed line-througe blue; */
+    text-docoration: wavy  ;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}

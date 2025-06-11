@@ -1,0 +1,15 @@
+/* 2)საიტზე დაამატეთ 3 p თაგი, პირველს text-shadow ჰქონდეს 5px 4px green, მეორესქონდეს 7px 50px 2348px purole, მესამე ქონდეს 90px 100px 200px brown, განმოიყენეთ id ები */
+p{
+    color: black;
+    text-decoration: solid underline rebeccapurple;
+    line-shadow:  dashed 5px,4px, green;
+}
+p{
+    color: blue;
+    text-shadow: dashed 7px,50px,2348px, purple  ;
+
+}
+p{
+    color: green;(13,)
+     line-shadow:  dashed 90px,100px,200px, brown  ; 
+}

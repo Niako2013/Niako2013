@@ -1,0 +1,17 @@
+/* 1)საიტზე დაამატეთ 3 p თაგი, პირველს ქონდეს text-decoration overline dashed red, მეორეს ქონდეს text-decoration underline wavy purple, მესამეს ქონდეს text-align justify და text-decoration line-through dashed blue  */
+p{
+    color: black;
+    text-decoration: solid underline red;
+    line-through:  dashed blue
+}
+p{
+    color: blue;
+    text-docoration: wavy purple  ;
+
+}
+p{
+    color: green;(13,)
+    text-align: justify;
+    text-docoration: wavy purple  ;
+     line-through:  dashed blue  ; 
+}
