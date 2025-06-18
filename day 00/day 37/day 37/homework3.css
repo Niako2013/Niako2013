@@ -1,0 +1,6 @@
+/* 3)საიტზე დაამატეთ div, რომელსაც ზომები აქვს width  300px height 300px, და background-color: green;, მასზე მაუსის მიტანაზე background-color გახდეს yellow, და მასზე დაჭერის დროს width გახდეს 400px */
+ a:hover  {
+    font-weight: 400px;
+    font-heigt:300px ;
+    background-color: greenyellow;
+}
