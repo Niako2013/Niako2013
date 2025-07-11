@@ -1,0 +1,15 @@
+ol{
+    list-style: square;
+    color: aqua;
+    background-color: black;
+}
+ol{
+    list-style: square;
+    color: rgb(243, 251, 6);
+    background-color: rgb(219, 10, 251);
+}
+ol{
+    list-style: square;
+    color: rgb(6, 141, 251);
+    background-color: rgb(251, 26, 10);
+}
