@@ -60,3 +60,17 @@ remove_spaces("  Python is fun  ") → "Pythonisfun"
 remove_spaces("NoSpaces") → "NoSpaces"
 def remove_spaces(text):
     return text.replace("","")
+
+#6)შექმენით ფუნქცია, რომელსაც გადაეცემა ორი არგუმენტი, შია და სტრინგი, თუ ეს სტრინგი არის "even" ამოიღეთ სიიდან მხოლოდ ლუქები და დააბრუნეთ, თუ ეს სტრინგი არის "odd" ამოიღეთ ამ სიიდან მხოლოდენ კენტები და დააბრუნეთ
+print(filter_number[1,2,3,4,5,6], "even"])
+print(filter_number[1,2,3,4,5,6], "odd"])
+#7)შექმენით ფუნქცია, რომელსაც გადაეცემა 1 არგუმენტი, ინტეჯერი, შემდეგ მაგ ინტეჯერი რაოდენობის ასოები დააბრუნეთ ანბანის მიხედვით
+მაგ: ინტეჯერი 8
+output: abcdefgh
+#chr(97)is 'a' (ASCII code for 'a' is 97)
+#the function generates the first n letters of the lowercase english alphabet
+
+
+#8) impossible level: შექმენით ფუნქცია, რომელიც დაპრინტავს "hello world"
+def say_hello():
+    print("hello world")
