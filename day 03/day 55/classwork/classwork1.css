@@ -1,0 +1,9 @@
+
+/* 1)პოზიციების მეშვებოით გახადეთ პარაგრაფი საიტზე მიწებებული იყოს და სქროლის დროს გამოყვეს */
+/* sticky keeps the paragrap stuck to the top of the scrollable area */
+
+/* 2)პოზიციების საშუალებით გადაადგილეთ დივი ცენტრში */
+/* 50% and left 50% move the top-left corner to the  center of the page */
+
+/* 3)შექმენით header, გასტილეთ და მიაწებეთ საიტის ზემოთა ნაწილს */
+/*position fixed and top 0 make the header stick to the top  */
