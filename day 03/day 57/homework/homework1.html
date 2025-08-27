@@ -1,0 +1,152 @@
+#1)კომენტარების სახით ახსენით რა არის lambda და რაში ვიყენებთ მას
+# A lambda is a small anonymous function in Python.
+# It is used to create simple functions without having to formally define them using 'def'.
+# The syntax is: lambda arguments: expression
+# Lambdas are often used for short, throwaway functions, especially as arguments to functions like map(), filter(), or sorted().
+# Example: lambda x: x * 2 creates a function that doubles its input.
+
+#2)შექმენით ფუნქცია lambda ს გამოყენებით რომელსაც გადაეცემა 1 არგუმენტი, რიცხვი, და ეგ რიცხვი გაამრავლეთ ორზეშ
+# Lambda function that takes one number and multiplies it by two
+double = lambda x: x * 2
+
+#3)კომენტარების სახით ახსენით რა არის map და რაშ ვიყენებთ მას
+# 'map' is a built-in Python function used to apply a function to every item in an iterable (like a list or tuple).
+# It takes two arguments: the function to apply, and the iterable to apply it to.
+# The result is a map object, which is an iterator—often converted to a list using list().
+# This is useful when you want to transform all items in a collection without writing a loop.
+# Example: map(lambda x: x * 2, [1, 2, 3]) returns [2, 4, 6] (after converting to a list).
+
+#4)# Create a list of numbers
+numbers = [10, 20, 30, 40, 50]
+
+# Use map with a lambda to multiply each number by its index
+# The lambda takes two arguments: the index and the number
+# We use enumerate to provide both index and value to the lambda
+result = list(map(lambda pair: pair[0] * pair[1], enumerate(numbers)))
+
+# Print the result
+print(result)  # Output: [0, 20, 60, 120, 200]
+
+#5)კომენტარების სახით ახსენით რა დროს ვიყენებთ lambda ს და რა დროს ვიყენებთ def ს
+# We use 'lambda' when we need a short, simple, anonymous function.
+# It's commonly used for one-time operations, especially when passing a function as an argument to functions like map(), filter(), or sorted().
+# Lambda functions are limited to a single expression and do not support multiple lines or statements.
+
+# Example use case for lambda:
+# squared = map(lambda x: x ** 2, [1, 2, 3])
+
+# We use 'def' when we need a more complex or reusable function.
+# Functions defined with 'def' can have multiple lines, contain multiple statements, and be reused throughout the code.
+# They can also include docstrings, default arguments, and support more advanced features like recursion.
+
+# Example use case for def:
+# def square(x):
+#     return x ** 2
+
+#6)მოიძიეთ ინფორმაცია filter ზე (შემდეგ გაკვეთილზე ვისწავლით მას)
+# The `filter()` function is a built-in tool in Python used to extract items from an iterable
+# that meet a specific condition. This condition is defined by a function (often called a predicate)
+# that returns `True` or `False` for each item. Only items where the function returns `True` are kept.
+
+# Syntax:
+#   filter(function, iterable)
+# - `function`: A single-argument function that returns a boolean (True/False).
+# - `iterable`: Any iterable object (like a list, tuple, string, etc.)
+
+# The result is a `filter` object (an iterator), so you typically wrap it with `list()` or `tuple()`
+# to visualize or work with the filtered results.
+
+# Example using a named function:
+numbers = [1, 2, 3, 4, 5, 6]
+
+def is_even(n):
+    return n % 2 == 0
+
+filtered_evens = filter(is_even, numbers)
+print(list(filtered_evens))  # Output: [2, 4, 6]
+
+# Example using a lambda function:
+filtered_evens = filter(lambda x: x % 2 == 0, numbers)
+print(list(filtered_evens))  # Output: [2, 4, 6]
+
+# You can also use `None` as the first argument:
+# In this case, `filter()` removes all items that are considered “falsy” in Python:
+# 0, "", None, [], {}, False, etc.
+objects = [0, 1, '', 'hello', [], [2, 3], None, False, True]
+filtered_truthy = filter(None, objects)
+print(list(filtered_truthy))  # Output: [1, 'hello', [2, 3], True]
+
+# `filter()` is lazy—it doesn’t compute results until needed. This makes it more memory-efficient
+# than writing explicit loops or using list comprehensions on large datasets.
+
+# However, in many cases, list comprehensions may be more readable:
+#   [item for item in iterable if condition(item)]
+
+# Summary:
+# - Use `filter()` when you want to keep only those items that satisfy a condition.
+# - You can use it with named functions, lambdas, or `None` for truthiness filtering.
+# - Remember to convert the result to a list or loop over it to access the filtered data.
+Why Use filter()?
+1. Expressive Functional Style
+filter() clearly indicates a selection process: you're explicitly keeping only the items meeting a condition—ideal for functional programming workflows. 
+realpython.com
+datacamp.com
+
+2. Lazy & Memory-Efficient
+Since filter() returns an iterator instead of a list, it doesn’t generate all results upfront. This lazy evaluation improves memory usage significantly when dealing with large datasets. 
+realpython.com
+Medium
+coderivers.org
+
+3. Flexible Predicate Options
+You can use named functions when clarity matters, lambdas for brevity, or None to filter out “falsy” values easily. 
+realpython.com
+datacamp.com
+Python documentation
+digitalocean.com
+
+4. Good Alternatives Exist
+List comprehensions are often more readable and Pythonic, especially for simple filters, though they sacrifice laziness. Generator expressions offer a lazy, comprehension-style alternative. 
+realpython.com
+Python documentation
+
+Let me know when you'd like to see filter() in action with real examples—like filtering out palindromes, valid email formats, or combining filter() with map() or reduce()!
+
+#7)მოიძიეწთ ინფორმაცია callback ზე
+A callback is simply a function you pass into another function as an argument, with the intention that it will be invoked ("called back") later—either immediately or once a specific event or operation completes.
+
+#8)კომენტარების სახით ახსენით შეგვიძლია თუარა ფუნქცია არგუმენტად გადავცემ კიდევ ერთი ფუნქცია
+# Yes, in Python (and many other languages), we can pass a function as an argument to another function.
+# This is possible because functions in Python are "first-class objects," meaning they can be:
+# - Assigned to variables
+# - Passed as arguments to other functions
+# - Returned from other functions
+
+# Passing functions as arguments is commonly used for callbacks, custom logic, and higher-order functions like map(), filter(), and sorted().
+
+# Example:
+# def greet(name):
+#     return f"Hello, {name}!"
+
+# def call_function(func, value):
+#     return func(value)
+
+# print(call_function(greet, "Alice"))  # Output: Hello, Alice!
+
+#9)
+# Define a function that takes two arguments:
+# 1. A function to apply
+# 2. A list of numbers
+def apply_function_to_list(func, data):
+    result = []  # Create an empty list to store the results
+    for item in data:
+        result.append(func(item))  # Apply the function and append the result
+    return result  # Return the new list with the modified values
+
+# Call the function:
+# - First argument: a lambda that multiplies each number by 5
+# - Second argument: a list of numbers
+output = apply_function_to_list(lambda x: x * 5, [1, 2, 3, 4, 5])
+
+# Print the result
+print(output)  # Output: [5, 10, 15, 20, 25]
