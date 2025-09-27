@@ -1,0 +1,104 @@
+#1)შექნენით დივი, მიეცით  width height, დაა როცა ეკრანის ზომა ჩამოსცდება 500 პიქსელს დივი გახდეს წითელი
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Div</title>
+  <style>
+    /* საწყისი სტილი დივისთვის */
+    .my-div {
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+    }
+
+    /* როცა ეკრანის სიგანე <= 500px გახდება, შევცვალოთ ფერი */
+    @media (max-width: 500px) {
+      .my-div {
+        background-color: red;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="my-div"></div>
+
+</body>
+</html>
+
+#2)შექმენით ანიმააცია, keyframe, შემდეგ დივი, მიეცით ჯერ მარტო width height bg,  და როცა კერანის ზომა გახდება 400 პიქსელი ეს ანიმაცია ამ დივზე ამუშავდეს
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Animation</title>
+  <style>
+    /* საწყისი სტილი დივისთვის */
+    .box {
+      width: 150px;
+      height: 150px;
+      background-color: green;
+    }
+
+    /* Keyframes ანიმაცია — მაგალითად ზომის გაზრდა და ფერის შეცვლა */
+    @keyframes growAndChange {
+      0% {
+        width: 150px;
+        background-color: green;
+      }
+      100% {
+        width: 300px;
+        background-color: orange;
+      }
+    }
+
+    /* როცა ეკრანის სიგანე <= 400px გახდება, ამუშავდეს ანიმაცია */
+    @media (max-width: 400px) {
+      .box {
+        animation: growAndChange 2s forwards;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box"></div>
+
+</body>
+</html>
+
+#3)შექმენით ტექსტი, 50 პიქსელი თავიდან და როცა იმ ზომამდე მივა ეკრანი როდესაც ტექსტი აღარ ეტევა, იგი ორჯერ დაპატარავდეს
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Text</title>
+  <style>
+    .responsive-text {
+      font-size: 50px;
+      white-space: nowrap; /* არ გადატრიალდეს ახალ ხაზზე */
+      overflow: hidden; /* თუ არ ეტევა — დაიმალოს */
+      text-overflow: ellipsis; /* დააჭრის ბოლოს */
+      width: 100%; /* აიკავოს მშობლის სრული სიგანე */
+    }
+
+    /* როცა ეკრანი ძალიან ვიწრო ხდება — ვცვლით font-size */
+    @media (max-width: 600px) {
+      .responsive-text {
+        font-size: 25px; /* დაპატარავება ორჯერ */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="responsive-text">
+    ეს არის ძალიან გრძელი ტექსტი რომელიც შესაძლოა ვიწრო ეკრანზე არ დაეტიოს.
+  </div>
+
+</body>
+</html>
